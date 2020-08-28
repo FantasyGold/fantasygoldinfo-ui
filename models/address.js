@@ -22,7 +22,11 @@ class Address {
   }
 
   static getTokenBalanceTransactions(id, {token, page, pageSize}, options = {}) {
-    return FantasyGoldinfoAPI.get(`/address/${id}/fgc20-balance-history`, {params: {token, page, pageSize}, ...options})
+    if (token) {
+      return FantasyGoldinfoAPI.get(`/address/${id}/fgc20-balance-history/${token}`, {params: {page, pageSize}, ...options})
+    } else {
+      return FantasyGoldinfoAPI.get(`/address/${id}/fgc20-balance-history`, {params: {page, pageSize}, ...options})
+    }
   }
 }
 

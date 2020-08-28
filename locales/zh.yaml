@@ -7,6 +7,7 @@
   token: Token
   misc: 杂项
   blockchain_height: 区块高度
+  current_difficulty: 挖矿难度
   network_weight: 网络权重
   fee_rate: 费率
 block:
@@ -55,9 +56,10 @@ transaction:
   fee: 手续费
   reward: 奖励
   gas_refund: Gas 退款
-  utxo:
+  script:
     type: 类型
     script: 脚本
+    witness: 见证
     code: 代码
     contract_create: 合约创建
     contract_call: 合约调用

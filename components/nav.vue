@@ -66,7 +66,7 @@
         }
         this.searching = true
         try {
-          let {type, id, addressHex} = await fantasygoldinfoGet(`/search`, {params: {query: searchString}})
+          let {type, id, address} = await fantasygoldinfoGet(`/search`, {params: {query: searchString}})
           switch (type) {
           case 'address':
             this.searchString = ''
@@ -77,9 +77,11 @@
             this.$router.push(`/block/${searchString}`)
             break
           case 'contract':
+          case 'fgc20':
+          case 'fgc721':
             this.searchString = ''
-            if (addressHex) {
-              this.$router.push(`/contract/${addressHex}`)
+            if (address) {
+              this.$router.push(`/contract/${address}`)
             } else {
               this.$router.push(`/contract/${searchString}`)
             }

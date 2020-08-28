@@ -7,6 +7,7 @@ blockchain:
   token: Token | Tokens
   misc: Misc
   blockchain_height: Blockchain Height
+  current_difficulty: Current Difficulty
   network_weight: Network Weight
   fee_rate: Fee Rate
 block:
@@ -55,9 +56,10 @@ transaction:
   fee: Fee
   reward: Reward
   gas_refund: Gas 退款
-  utxo:
+  script:
     type: Type
     script: Script
+    witness: Witness
     code: Code
     contract_create: Contract Create
     contract_call: Contract Call

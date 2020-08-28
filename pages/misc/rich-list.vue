@@ -74,8 +74,8 @@
         if (height <= 8800) {
           return height * 20000
         }
-        let supply = 1e16
-        let reward = 4e8
+        let supply = 176e14
+        let reward = 5e8
         let interval = 985500
         height -= 8800
         let halvings = 0

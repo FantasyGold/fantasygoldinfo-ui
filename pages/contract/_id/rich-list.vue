@@ -11,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="({address, addressHex, balance}, index) of list">
+          <tr v-for="({address, balance}, index) of list">
             <td>{{ 100 * (currentPage - 1) + index + 1 }}</td>
             <td>
               <AddressLink :address="addressHex || address" />
